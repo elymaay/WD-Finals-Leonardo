@@ -1,0 +1,176 @@
+@import "compass/css3";
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    flex-direction: column;
+}
+
+.trapdoor {
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+    margin: 20px 0;
+    width: 220px;
+    height: 70px;
+    box-shadow: inset -7px 0px 12px -8px rgba(0,0,0,0.3), inset 7px 0px 12px -8px rgba(0,0,0,0.3);
+    background: rgba(0,0,0,0.3);
+    -webkit-transition: background 400ms ease-in-out;
+    -moz-transition: background 400ms ease-in-out;
+    -ms-transition: background 400ms ease-in-out;
+    -o-transition: background 400ms ease-in-out;
+    transition: background 400ms ease-in-out;
+    overflow: hidden;
+}
+
+.trapdoor .social-follow-button, .trapdoor .icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 400ms ease-in-out;
+    text-decoration: none;
+    color: white;
+    background: black;
+    border-radius: 25px;
+    overflow: hidden;
+    z-index: 1;
+    font-size: 16px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.trapdoor .icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1; /* Ensure icon is visible */
+    background-size: contain; /* Adjust as necessary */
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 15px; /* Ensure sufficient size */
+    height: 25px; /* Ensure sufficient size */
+    z-index: 1;
+}
+
+.trapdoor.twitter .icon {
+    background-image: url('https://img.freepik.com/premium-vector/new-twitter-logo-apps-x_692249-27.jpg'); /* Twitter icon URL */
+}
+
+.trapdoor.facebook .icon {
+    background-image: url('https://img.freepik.com/premium-vector/facebook-vector-social-media-icon_459124-520.jpg'); /* Facebook icon URL */
+}
+
+.trapdoor.instagram .icon {
+    background-image: url('https://img.freepik.com/premium-vector/instagram-icon_488108-3.jpg'); /* Instagram icon URL */
+}
+
+.trapdoor.gmail .icon {
+    background-image: url('https://logowik.com/content/uploads/images/t_682_gmail.jpg'); /* Gmail icon URL */
+}
+
+.trapdoor.github .icon {
+    background-image: url('https://freebiesbug.com/wp-content/uploads/2012/12/github-psd-icon-580x340.jpg'); /* GitHub icon URL */
+}
+
+
+.trapdoor:hover .icon {
+    opacity: 0;
+}
+
+.trapdoor:hover {
+    background: #fff;
+}
+
+.trapdoor:hover .door {
+    box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.4);
+    -webkit-transform: scale(1.08);
+    -moz-transform: scale(1.08);
+    -ms-transform: scale(1.08);
+    -o-transform: scale(1.08);
+    transform: scale(1.08);
+}
+
+.trapdoor:hover .top {
+    top: -50%;
+}
+
+.trapdoor:hover .bottom {
+    top: 100%;
+}
+
+.trapdoor:hover .social-follow-button {
+    opacity: 1;
+}
+
+.trapdoor:hover .icon {
+    opacity: 0;
+}
+
+.top {
+    top: 0%;
+    left: 0px;
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background-color: #fff;
+    -webkit-transition: top 400ms, box-shadow 200ms, -webkit-transform 300ms;
+    -moz-transition: top 400ms, box-shadow 200ms, -moz-transform 300ms;
+    -ms-transition: top 400ms, box-shadow 200ms, -ms-transform 300ms;
+    -o-transition: top 400ms, box-shadow 200ms, -o-transform 300ms;
+    transition: top 400ms, box-shadow 200ms, transform 300ms;
+    -webkit-transition-timing-function: ease-in-out;
+    -moz-transition-timing-function: ease-in-out;
+    -ms-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+}
+
+.bottom {
+    top: 50%;
+    left: 0px;
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background-color: #fff;
+    -webkit-transition: top 400ms, box-shadow 200ms, -webkit-transform 300ms;
+    -moz-transition: top 400ms, box-shadow 200ms, -moz-transform 300ms;
+    -ms-transition: top 400ms, box-shadow 200ms, -ms-transform 300ms;
+    -o-transition: top 400ms, box-shadow 200ms, -o-transform 300ms;
+    transition: top 400ms, box-shadow 200ms, transform 300ms;
+    -webkit-transition-timing-function: ease-in-out;
+    -moz-transition-timing-function: ease-in-out;
+    -ms-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+}
+
+@font-face {
+    font-family: 'tweet';
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/277/tweet.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'instagram';
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/277/instagram.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'github';
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/277/github.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
